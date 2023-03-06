@@ -23,6 +23,11 @@ function App() {
     setCount(count - 1)
   }
 
+  // count를 초기화해주는 함수
+  const initCount = () => {
+    setCount(0)
+  }
+
   return (
     <>
       <h3>카운트 예제입니다!</h3>
@@ -30,12 +35,11 @@ function App() {
       <button onClick={onPlusButtonClickHandler}>+</button>
       <button onClick={onMinusButtonClickHandler}>-</button>
       <div style={boxesStyle}>
-        <Box1 />
+        <Box1 initCount={initCount} />
         <Box2 />
         <Box3 />
       </div>
     </>
   )
 }
-
 export default App
